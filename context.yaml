@@ -1,0 +1,24 @@
+# Voice Hub Context Definition
+agent:
+  name: voice-hub
+  type: telephony_manager
+  
+context:
+  static:
+    freeswitch_host: "10.152.0.77"
+    ui_port: 3211
+    sip_port: 5060
+    database: "postgresql://10.152.0.76/acs_voice"
+    
+  capabilities:
+    - call_management
+    - sip_routing
+    - ivr_control
+    - recording_management
+    - conference_bridge
+    
+  integrations:
+    voice_agent:
+      type: direct
+      protocol: websocket
+      endpoint: "ws://10.152.0.71:3212/voice"
