@@ -1,0 +1,10 @@
+{
+  "service": "ACS-Voice",
+  "database": {
+    "host": "10.152.0.76",
+    "primary": "acs_voice_hub_db",
+    "shared_access": ["user_memory", "conversations", "knowledge_base", "software_catalog", "software_docs"]
+  },
+  "freeswitch": {"host": "10.152.0.77", "port": 8021},
+  "expertise": {"FreeSWITCH": 10, "SIP": 9}
+}
