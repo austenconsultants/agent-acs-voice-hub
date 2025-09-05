@@ -1,25 +1,22 @@
-# ACS Voice Hub Agent
+# Agent: ACS Voice Hub Manager
 
-## Overview
-Voice Hub manages FreeSWITCH integration and telephony operations.
+## Purpose
+This is a chatbot agent/persona that helps users manage the FreeSWITCH components of AUSTENTEL-ACS.
 
-## Components
-- **Frontend**: React UI on Node.js (Port 3211)
-- **Backend**: FreeSWITCH (10.152.0.77)
-- **Database**: PostgreSQL + Valkey
-- **Integration**: Direct connection to Voice Agent
+## What This Agent Does
+- Provides expert knowledge about FreeSWITCH configuration
+- Helps users manage SIP trunks and extensions
+- Guides IVR setup and call routing
+- Troubleshoots telephony issues
+- Controls the AUSTENTEL-ACS FreeSWITCH UI
 
-## Architecture
-```
-Voice Hub (3211)
-    ├── React UI
-    ├── FreeSWITCH Control
-    ├── SIP Management
-    └── Call Routing
-```
+## Knowledge Base
+- FreeSWITCH best practices
+- SIP protocol expertise
+- Call routing patterns
+- IVR design principles
 
-## Context Keys
-- `voice_hub.config` - Current configuration
-- `voice_hub.active_calls` - Live call state
-- `voice_hub.sip_registrations` - SIP endpoints
-- `voice_hub.ivr_flows` - IVR configurations
+## Integration
+This agent is used by the ACS Chat Hub to interact with the main AUSTENTEL-ACS platform.
+
+**Main Platform**: [github.com/Austentel/Austentel](https://github.com/Austentel/Austentel)
